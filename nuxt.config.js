@@ -1,4 +1,5 @@
 export default {
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'mat-password-generator',
@@ -14,6 +15,12 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+  },
+
+  routeRules: {
+    '/examples/*': { redirect: '/redirect-route' },
+    '/modify-headers-route': { headers: { 'x-magic-of': 'nuxt and vercel' } },
+    '/spa': { ssr: false },
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -36,12 +43,6 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
-  defineNuxtConfig: ({
-    routeRules: {
-      // Use client-side rendering for all routes
-      '/**': { ssr: false },
-    },
-  }),
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
