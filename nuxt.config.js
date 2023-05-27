@@ -36,6 +36,12 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
   ],
+  defineNuxtConfig: ({
+    routeRules: {
+      // Use client-side rendering for all routes
+      '/**': { ssr: false },
+    },
+  }),
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
