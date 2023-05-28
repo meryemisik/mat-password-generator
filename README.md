@@ -1,4 +1,4 @@
-# hello
+# mat-password-generator
 
 ## Project setup
 ```

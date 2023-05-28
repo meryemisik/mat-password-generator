@@ -7,6 +7,8 @@
       ></div>
     </template>
     <div class="password-select-type">
+
+    <template>
       <a-select
         default-value="random"
         @change="changePasswordType($event)"
@@ -17,6 +19,7 @@
         </a-select-option>
         <a-select-option value="pin"> Pin </a-select-option>
       </a-select>
+    </template>
 
       <a-button @click="randomPassword()"><a-icon type="sync" class="password-refresh-button" /></a-button>
 
@@ -69,6 +72,7 @@
 </template>
 <script>
 import { wordlist } from "./data/words";
+import { notification } from 'ant-design-vue';
 export default {
   data: () => ({
     passwordResultSeperated: "",
@@ -98,8 +102,8 @@ export default {
       document.body.append(textArea);
       textArea.select();
       document.execCommand("copy");
-      this.$notification['success']({
-        message: "Copy successful",
+      notification['success']({
+        message: 'Notification Title',
       });
     },
     capitalizeCheckFunction(e) {
