@@ -68,7 +68,7 @@
   </div>
 </template>
 <script>
-import { wordlist } from "../data/words";
+import { wordlist } from "./data/words";
 export default {
   data: () => ({
     passwordResultSeperated: "",
@@ -206,5 +206,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import "../assets/generatorPassword.scss";
+@import "./assets/generatorPassword.scss";
 </style>
